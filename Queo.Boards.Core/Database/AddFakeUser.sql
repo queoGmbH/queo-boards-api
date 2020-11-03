@@ -1,0 +1,1 @@
+insert into dbo.tblUser (BusinessId, UserName) values ('1A45BDC6-6246-42B5-88C8-3FAAF95E0AF5', 'testuser');

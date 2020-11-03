@@ -1,0 +1,103 @@
+﻿<?xml version="1.0"
+      encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:db="http://www.springframework.net/database"
+         xmlns:tx="http://www.springframework.net/tx"
+         xsi:schemaLocation="http://www.springframework.net 
+             http://www.springframework.net/xsd/spring-objects.xsd ">
+
+  <!-- Spring-Konfiguration der Daos. Diese sind in alphabetischer Reihenfolge (Id) zu definieren.-->
+  <object id="boardDao"
+          type="Queo.Boards.Core.Persistence.Impl.BoardDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+
+  <object id="activityBaseDao"
+          type="Queo.Boards.Core.Persistence.Impl.ActivityBaseDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+
+  <object id="boardActivityDao"
+          type="Queo.Boards.Core.Persistence.Impl.BoardActivityDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+
+  <object id="cardDao"
+          type="Queo.Boards.Core.Persistence.Impl.CardDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+
+  <object id="checklistDao"
+          type="Queo.Boards.Core.Persistence.Impl.ChecklistDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+
+  <object id="commentDao"
+          type="Queo.Boards.Core.Persistence.Impl.CommentDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+
+  <object id="documentDao"
+          type="Queo.Boards.Core.Persistence.Impl.DocumentDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+
+  <object id="fileSystemDao"
+          type="Queo.Boards.Core.Persistence.Impl.FileSystemDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="DocumentBasePath"
+              value="${documentBasePath}" />
+  </object>
+  <object id="labelDao"
+          type="Queo.Boards.Core.Persistence.Impl.LabelDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+  <object id="listDao"
+          type="Queo.Boards.Core.Persistence.Impl.ListDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+  <object id="notificationDao"
+          type="Queo.Boards.Core.Persistence.Impl.NotificationDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+  <object id="taskDao"
+          type="Queo.Boards.Core.Persistence.Impl.TaskDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+  <object id="teamDao"
+          type="Queo.Boards.Core.Persistence.Impl.TeamDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+  <object id="userDao"
+          type="Queo.Boards.Core.Persistence.Impl.UserDao, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="SessionFactory"
+              ref="applicationSessionFactory" />
+  </object>
+</objects>

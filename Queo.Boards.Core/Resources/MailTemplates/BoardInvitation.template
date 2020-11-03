@@ -1,0 +1,11 @@
+﻿Subject: Einladung zum Board {{board.Title}}
+
+Hallo {{user.Firstname}} {{user.Lastname}},
+
+Sie wurden zur Teilnahme am Board "{{board.Title}}" eingeladen.
+Über folgenden Link gelangen Sie zum Board: 
+
+{{frontendConfiguration.BaseUrl}}/board/{{board.BusinessId}}
+
+Viele Grüße,
+Ihr queo-boards-Team.

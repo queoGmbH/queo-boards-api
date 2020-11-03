@@ -1,0 +1,12 @@
+﻿<SolutionConfiguration>
+  <Settings>
+    <AllowParallelTestExecution>True</AllowParallelTestExecution>
+    <SolutionConfigured>True</SolutionConfigured>
+  </Settings>
+  <EngineModes>
+    <EngineMode>
+      <Name>Run all tests automatically</Name>
+      <Settings />
+    </EngineMode>
+  </EngineModes>
+</SolutionConfiguration>

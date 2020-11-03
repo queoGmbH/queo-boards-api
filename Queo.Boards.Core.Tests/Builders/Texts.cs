@@ -1,0 +1,12 @@
+﻿namespace Queo.Boards.Core.Tests.Builders {
+    public static class Texts {
+        public static string LargeText =
+                @"Spicy jalapeno bacon ipsum dolor amet pancetta prosciutto bacon ball tip, pork chop swine sausage. Ball tip cow prosciutto jowl tail filet mignon biltong tongue porchetta. Porchetta turkey kevin alcatra beef ham sirloin pork belly pork. Porchetta tongue burgdoggen kielbasa, chicken beef ribs shank fatback landjaeger brisket short loin strip steak spare ribs ham rump. Leberkas pork chop porchetta cupim meatball sirloin ribeye shankle pig ball tip ham beef. Prosciutto drumstick turducken, alcatra cupim tenderloin tongue biltong pastrami ribeye pork loin porchetta landjaeger doner flank. Tenderloin pork loin kevin short loin pork belly filet mignon biltong cupim chuck cow tail boudin capicola ground round.
+
+Spare ribs pig porchetta swine fatback. Ground round tenderloin corned beef jowl sirloin short ribs rump andouille ham hock bacon.Spare ribs pork ham doner, turkey chicken ground round kielbasa shoulder drumstick tenderloin jowl ball tip.Beef ribs flank boudin tri - tip.Burgdoggen bacon spare ribs ribeye rump tri-tip.Burgdoggen pork capicola, beef porchetta pork chop pancetta short loin shoulder chicken. Corned beef pork chop flank, cupim jerky alcatra tail picanha ham hock pastrami.
+
+Jowl ham hock short loin, jerky short ribs picanha rump ham bacon prosciutto doner tongue tail pork.Sirloin ham pork loin, alcatra tenderloin andouille beef ribs salami meatball ribeye corned beef frankfurter capicola.T - bone leberkas chuck pork chop. Boudin cupim doner, short ribs pork chop pastrami drumstick biltong ham hock pig. Sirloin pastrami bresaola frankfurter, drumstick cupim kevin biltong spare ribs pork. Ham turducken burgdoggen, cupim doner strip steak chuck ribeye pig.Jerky fatback venison, landjaeger shank shoulder pork ham hock bacon chicken t - bone.
+
+Andouille kielbasa chuck capicola tri-tip ham tenderloin strip steak cupim ground round pork belly fatback pork loin. Pork loin jerky spare ribs pork pastrami, bacon t-bone andouille.Kevin sirloin ham hock pork belly tenderloin pork chop, bacon turkey. Swine tail jerky, meatball turkey leberkas picanha shoulder.Pancetta fatback burgdoggen chuck short loin. Landjaeger beef chuck biltong drumstick bresaola strip steak ground round capicola pastrami.";
+    }
+}

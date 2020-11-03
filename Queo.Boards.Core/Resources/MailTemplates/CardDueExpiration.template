@@ -1,0 +1,14 @@
+﻿Subject: Fälligkeit der Karte "{{card.Title}}" erreicht
+
+Hallo {{user.Firstname}} {{user.Lastname}},
+
+die Fälligkeit der Karte "{{card.Title}}" ist demnächst erreicht.
+
+Board: {{board.Title}}
+Liste: {{list.Title}}
+
+Über folgenden Link gelangen Sie zur Karte: 
+{{frontendConfiguration.BaseUrl}}/board/{{board.BusinessId}}/card/{{card.BusinessId}}
+
+Viele Grüße,
+Ihr queo-boards-Team.

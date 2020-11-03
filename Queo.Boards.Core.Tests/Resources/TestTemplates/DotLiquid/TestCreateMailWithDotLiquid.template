@@ -1,0 +1,8 @@
+﻿Subject: Test für {{ user.UserName }}
+
+Hallo {{ user.Firstname }} {{ user.Lastname }},
+
+in diesem Test wird nur geprüft, ob das Ersetzen von Platzhaltern mit {{ templateEngine }} funktioniert.
+
+Viele Grüße,
+der Entwickler der den Test geschrieben hat.

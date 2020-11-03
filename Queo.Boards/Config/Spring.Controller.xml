@@ -1,0 +1,154 @@
+﻿<?xml version="1.0"
+      encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <object id="nSwagTestController"
+          type="Queo.Boards.Controllers.NSwagTestController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="aboutController"
+          type="Queo.Boards.Controllers.AboutController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="boardController"
+          type="Queo.Boards.Controllers.Boards.BoardController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+  
+  <object id="boardMembersController"
+          type="Queo.Boards.Controllers.Boards.BoardMembersController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+  
+  <object id="boardOwnersController"
+          type="Queo.Boards.Controllers.Boards.BoardOwnersController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+  
+  <object id="boardTeamsController"
+          type="Queo.Boards.Controllers.Boards.BoardTeamsController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="archivedBoardController"
+          type="Queo.Boards.Controllers.Boards.ArchivedBoardController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="boardTemplateController"
+          type="Queo.Boards.Controllers.Boards.BoardTemplateController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="copyController"
+          type="Queo.Boards.Controllers.CopyController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="listController"
+          type="Queo.Boards.Controllers.ListController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="cardController"
+          type="Queo.Boards.Controllers.CardController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+    <property name="DocumentTempPath" value="${uploadedFileBasePath}" />
+  </object>
+
+  <object id="labelController"
+          type="Queo.Boards.Controllers.LabelController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="checklistController"
+          type="Queo.Boards.Controllers.ChecklistController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="searchController"
+          type="Queo.Boards.Controllers.SearchController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="taskController"
+          type="Queo.Boards.Controllers.TaskController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="commentController"
+          type="Queo.Boards.Controllers.CommentController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="documentController"
+          type="Queo.Boards.Controllers.DocumentController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="attachmentController"
+          type="Queo.Boards.Controllers.AttachmentController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="moveController"
+          type="Queo.Boards.Controllers.MoveController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="teamController"
+          type="Queo.Boards.Controllers.TeamController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="userController"
+          type="Queo.Boards.Controllers.UserController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="notificationController"
+          type="Queo.Boards.Controllers.Notifications.NotificationController, Queo.Boards"
+          autowire="autodetect"
+          singleton="false">
+  </object>
+
+  <object id="rolesController"
+          type="Queo.Boards.Controllers.RolesController, Queo.Boards"
+          autowire="constructor"
+          singleton="false">
+  </object>
+
+  <object id="systemConfigurationController"
+          type="Queo.Boards.Controllers.SystemConfigurationController, Queo.Boards"
+          autowire="constructor"
+          singleton="false">
+    <property name="MaxUser"
+              value="${maxUser}" />
+  </object>
+
+</objects>

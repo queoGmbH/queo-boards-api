@@ -1,0 +1,10 @@
+﻿Subject: Passwort zurücksetzen 
+
+Hallo {{user.Firstname}} {{user.Lastname}},
+
+um Ihr Passwort zurück zu setzen nutzen Sie bitte folgenden Link:
+
+{{frontendConfiguration.BaseUrl}}/#/password-reset/{{resetPasswordDto.PasswordResetRequestId}}
+
+Viele Grüße,
+Ihr queo-boards-Team.

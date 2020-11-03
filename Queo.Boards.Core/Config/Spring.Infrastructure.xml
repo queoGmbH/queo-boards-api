@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"
+      encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+  <object id="activeDirectoryDao"
+          type="Queo.Boards.Core.Infrastructure.ActiveDirectory.ActiveDirectoryDao, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="activeDirectoryConfiguration"
+          type="Queo.Boards.Core.Infrastructure.ActiveDirectory.ActiveDirectoryConfiguration, Queo.Boards.Core"
+          singleton="true">
+    <property name="AdministratorsGroupName" value="${activeDirectoryGroupNameForAdministrators}"/>
+    <property name="UsersGroupName" value="${activeDirectoryGroupNameForUsers}"/>
+  </object>
+
+  <object id="activeDirectoryAccessConfiguration"
+            type="Queo.Boards.Core.Infrastructure.ActiveDirectory.ActiveDirectoryAccessConfiguration, Queo.Boards.Core"
+            singleton="true">
+    <property name="ServerName" value="${activeDirectoryAccessServerName}"/>
+    <property name="DomainName" value="${activeDirectoryAccessDomainName}"/>
+    <property name="ContainerName" value="${activeDirectoryAccessContainerName}"/>
+    <property name="AccessUserName" value="${activeDirectoryAccessUserName}"/>
+    <property name="AccessPassword" value="${activeDirectoryAccessPassword}"/>
+  </object>
+
+  <object id="frondendConfiguration"
+          type="Queo.Boards.Core.Infrastructure.Frontend.FrontendConfiguration, Queo.Boards.Core"
+          singleton="true">
+    <property name="BaseUrl" value="${frontendBaseUrl}"/>    
+  </object>
+
+</objects>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0"
+      encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--Validatoren für Boards-->
+  <object id="boardCreateAndUpdateValidator"
+            type="Queo.Boards.Core.Validators.Boards.BoardCreateAndUpdateValidator, Queo.Boards.Core"
+            autowire="autodetect" singleton="false">
+  </object>
+  <object id="boardTitleValidator"
+          type="Queo.Boards.Core.Validators.Boards.BoardTitleValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+
+  <!--Validatoren für Labels-->
+  <object id="labelUpdateDtoValidator"
+            type="Queo.Boards.Core.Validators.Labels.LabelDtoValidator, Queo.Boards.Core"
+            autowire="autodetect" singleton="false">
+  </object>
+
+
+  <!--Validatoren für Listen-->
+  <object id="listCreateAndUpdateValidator"
+          type="Queo.Boards.Core.Validators.Lists.ListCreateAndUpdateValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+  <object id="listNameValidator"
+          type="Queo.Boards.Core.Validators.Lists.ListNameValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+
+  <!--Validatoren für Karten-->
+  <object id="cardCreateDtoValidator"
+          type="Queo.Boards.Core.Validators.Cards.CardDtoValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+  <object id="cardNameValidator"
+            type="Queo.Boards.Core.Validators.Cards.CardNameValidator, Queo.Boards.Core"
+            autowire="autodetect" singleton="false">
+  </object>
+  <object id="cardUpdateDtoValidator"
+            type="Queo.Boards.Core.Validators.Cards.CardTitleValidator, Queo.Boards.Core"
+            autowire="autodetect" singleton="false">
+  </object>
+  <object id="dueValidator"
+          type="Queo.Boards.Core.Validators.Cards.DueValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+  <object id="dueDateTimeValidator"
+          type="Queo.Boards.Core.Validators.Cards.DueDateTimeValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+  
+  <!--Validatoren für Kommentaren-->
+  
+
+  <!--Validatoren für Checklisten-->
+  
+
+  <!--Validatoren für Teams-->
+  <object id="teamNameValidator"
+          type="Queo.Boards.Core.Validators.Teams.TeamNameValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+
+  <!--Validatoren für Nutzer-->
+  <object id="userUpdateModelValidator"
+          type="Queo.Boards.Core.Validators.Users.UserUpdateModelValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+  <object id="userCreateModelValidator"
+          type="Queo.Boards.Core.Validators.Users.UserCreateModelValidator, Queo.Boards.Core"
+          autowire="autodetect" singleton="false">
+  </object>
+
+  <!--Validatoren für bestimmte Einzelwerte. Werden meist in anderen Validatoren verwendet. Z.B: Fälligkeitsdatum-->
+
+
+</objects>

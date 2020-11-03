@@ -1,0 +1,77 @@
+﻿<?xml version="1.0"
+      encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <object id="schedulingFactory"
+          type="Spring.Scheduling.Quartz.SchedulerFactoryObject, Spring.Scheduling.Quartz2">
+    <property name="Triggers">
+      <list>
+        <ref object="activeDirectorySynchronizationTrigger" />
+        <ref object="cardDueExpirationNotificationTrigger" />
+        <ref object="sendEmailForUnreadNotificationsTrigger" />
+      </list>
+    </property>
+  </object>
+
+  <!-- Job-Definitions -->
+
+  <!--Job für die Synchronisation der AD-Nutzer-->
+  <object id="activeDirectorySynchronizationJob"
+          type="Spring.Scheduling.Quartz.MethodInvokingJobDetailFactoryObject, Spring.Scheduling.Quartz2">
+    <property name="TargetObject"
+              ref="userService" />
+    <property name="TargetMethod"
+              value="SynchronizeWithActiveDirectory" />
+  </object>
+
+  <!--Job zur Benachrichtigung von Nutzern, dass das Fälligkeitsdatum einer Karte abgelaufen ist-->
+  <object id="cardDueExpirationNotificationJob"
+          type="Spring.Scheduling.Quartz.MethodInvokingJobDetailFactoryObject, Spring.Scheduling.Quartz2">
+    <property name="TargetObject"
+              ref="notificationService" />
+    <property name="TargetMethod"
+              value="CreateCardNotificationsForDueExpiration" />
+  </object>
+
+  <!--Job zum Versenden von E-Mails, über ungelesene Benachrichtigungen-->
+  <object id="sendEmailForUnreadNotificationsJob"
+        type="Spring.Scheduling.Quartz.MethodInvokingJobDetailFactoryObject, Spring.Scheduling.Quartz2">
+    <property name="TargetObject"
+              ref="notificationService" />
+    <property name="TargetMethod"
+              value="SendEmailForUnreadNotifications" />
+  </object>
+
+  <!-- Trigger-Definitions-->
+
+  <!--Trigger für die Synchronisation der AD-Nutzer-->
+  <object id="activeDirectorySynchronizationTrigger"
+          type="Spring.Scheduling.Quartz.CronTriggerObject, Spring.Scheduling.Quartz2">
+    <property name="JobDetail"
+              ref="activeDirectorySynchronizationJob" />
+    <property name="CronExpressionString"
+              value="${activeDirectorySynchronizationTriggerCronString}" />
+  </object>
+
+  <!--Trigger zur Benachrichtigung von Nutzern, dass das Fälligkeitsdatum einer Karte abgelaufen ist-->
+  <object id="cardDueExpirationNotificationTrigger"
+          type="Spring.Scheduling.Quartz.CronTriggerObject, Spring.Scheduling.Quartz2">
+    <property name="JobDetail"
+              ref="cardDueExpirationNotificationJob" />
+    <property name="CronExpressionString"
+              value="${cardDueExpirationNotificationTriggerCronString}" />
+  </object>
+
+
+  <!--Trigger zum Versenden von E-Mails, über ungelesene Benachrichtigungen-->
+  <object id="sendEmailForUnreadNotificationsTrigger"
+          type="Spring.Scheduling.Quartz.CronTriggerObject, Spring.Scheduling.Quartz2">
+    <property name="JobDetail"
+              ref="sendEmailForUnreadNotificationsJob" />
+    <property name="CronExpressionString"
+              value="${sendEmailForUnreadNotificationsTriggerCronString}" />
+  </object>
+
+</objects>

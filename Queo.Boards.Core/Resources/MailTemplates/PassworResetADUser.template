@@ -1,0 +1,9 @@
+﻿Subject: Passwort zurücksetzen 
+
+Hallo {{user.Firstname}} {{user.Lastname}},
+
+für den Login müssen Sie das Passwort verwenden, welches Sie auch benutzten um sich an Ihrem
+PC bzw. sich am AD anzumelden.
+
+Viele Grüße,
+Ihr queo-boards-Team.

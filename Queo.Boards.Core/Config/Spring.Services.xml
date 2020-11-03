@@ -1,0 +1,135 @@
+﻿<?xml version="1.0"
+      encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <object id="activeDirectoryService"
+          type="Queo.Boards.Core.Services.Impl.ActiveDirectoryService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="boardService"
+          type="Queo.Boards.Core.Services.Impl.BoardService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="emailService"
+          type="Queo.Boards.Core.Infrastructure.Email.EmailService, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="EmailSenderAddress"
+              value="${emailSenderAddress}" />
+    <property name="EmailSenderName"
+              value="${emailSenderName}" />
+    <property name="SmtpHostAddress"
+              value="${smtpHostAddress}" />
+    <property name="SmtpPort"
+              value="${smtpPort}" />
+    <property name="SmtpServerLogin"
+              value="${smtpServerLogin}" />
+    <property name="SmtpServerPassword"
+              value="${smtpServerPassword}" />
+    <property name="SmtpSslEnabled"
+              value="${smtpSslEnabled}" />
+    <property name="IgnoreInvalidSslCertificate"
+              value="${smtpIgnoreInvalidSslCertificate}" />
+  </object>
+
+  <object id="emailNotificationService"
+          type="Queo.Boards.Core.Services.Impl.EmailNotificationService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="mailMessageProvider"
+          type="Queo.Boards.Core.Infrastructure.Templating.FileMessage.FileMessageProvider"
+          autowire="autodetect">
+    <property name="ResourceRelativePath"
+              value="${resourceRelativePath}" />
+    <property name="RenderContext"
+              ref="renderContext" />
+  </object>
+
+  <object id="renderContext"
+          type="Queo.Boards.Core.Infrastructure.Templating.DotLiquid.DotLiquidRenderContext">
+  </object>
+
+  <object id="listService"
+          type="Queo.Boards.Core.Services.Impl.ListService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="notificationService"
+          type="Queo.Boards.Core.Services.Impl.NotificationService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="cardService"
+          type="Queo.Boards.Core.Services.Impl.CardService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="labelService"
+          type="Queo.Boards.Core.Services.Impl.LabelService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="checklistService"
+          type="Queo.Boards.Core.Services.Impl.ChecklistService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="taskService"
+          type="Queo.Boards.Core.Services.Impl.TaskService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="commentService"
+          type="Queo.Boards.Core.Services.Impl.CommentService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+
+  <object id="documentService"
+          type="Queo.Boards.Core.Services.Impl.DocumentService, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="AllowedUploadFileExtensions"
+              value="${allowedUploadFileExtensions}" />
+  </object>
+  <object id="teamService"
+          type="Queo.Boards.Core.Services.Impl.TeamService, Queo.Boards.Core"
+          autowire="autodetect">
+  </object>
+  <object id="userService"
+          type="Queo.Boards.Core.Services.Impl.UserService, Queo.Boards.Core"
+          autowire="autodetect">
+    <property name="MaxUser"
+              value="${maxUser}" />
+    <property name="PasswordResetHours"
+              value="${passwordResetHours}" />
+  </object>
+
+  <object id="roleService"
+          type="Queo.Boards.Core.Services.Impl.RoleService, Queo.Boards.Core"
+          autowire="constructor">
+  </object>
+
+  <object id="securityService"
+          type="Queo.Boards.Core.Services.Impl.SecurityService, Queo.Boards.Core"
+          autowire="constructor">
+  </object>
+
+  <object id="imageThumbnailer"
+          singleton="true"
+          type="Queo.Boards.Core.Infrastructure.Thumbnailing.ImageThumbnailer">
+    <constructor-arg name="mediaPath">
+      <object type="System.IO.DirectoryInfo, mscorlib">
+        <constructor-arg value="${mediaPath}" />
+      </object>
+    </constructor-arg>
+    <constructor-arg name="ghostScriptPath">
+      <object type="System.IO.DirectoryInfo, mscorlib">
+        <constructor-arg value="${ghostScriptPath}" />
+      </object>
+    </constructor-arg>
+  </object>
+
+</objects>

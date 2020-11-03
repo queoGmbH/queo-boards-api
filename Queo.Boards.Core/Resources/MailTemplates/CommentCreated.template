@@ -1,0 +1,14 @@
+﻿Subject: Neuer Kommentar zur Karte {{card.Title}}
+
+Hallo {{user.Firstname}} {{user.Lastname}},
+
+es gibt einen neuen Kommentar zur Karte "{{card.Title}}".
+
+Board: {{board.Title}}
+Liste: {{list.Title}}
+
+Über folgenden Link gelangen Sie zum Kommentar dieser Karte: 
+{{frontendConfiguration.BaseUrl}}/board/{{board.BusinessId}}/card/{{card.BusinessId}}#{{comment.BusinessId}}
+
+Viele Grüße,
+Ihr queo-boards-Team.
