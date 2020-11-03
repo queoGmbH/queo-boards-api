@@ -70,7 +70,7 @@ activeDirectorySynchronizationTriggerCronString=0 0 22 ? 8 FRI
 
 ### Queo Boards API Configurations
 
-Please enter here your Frontend URL to reset a password.\
+Please enter here your Frontend URL to reset a password.
 
 Example:
 ```
@@ -90,4 +90,4 @@ A 0 as configuration value means unlimited.
 maxUser = 150
 ```
 \
-Finally you have configured the API. Now you have to only Copy this configuration file to the following to paths: `"../Queo.Boards.Core.Tests/Config/", "Queo.Boards.Tests"` and change the database name in the copied files to `"dev_queo_boards_it"`.
+Finally you have configured the API. Now you have to only Copy this configuration file to the following to paths: `"../Queo.Boards.Core.Tests/Config/", "../Queo.Boards.Tests/Config/"` and change the database name in the copied files to `"dev_queo_boards_it"`.
