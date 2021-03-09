@@ -91,3 +91,21 @@ maxUser = 150
 ```
 \
 Finally you have configured the API. Now you have to only Copy this configuration file to the following to paths: `"../Queo.Boards.Core.Tests/Config/", "../Queo.Boards.Tests/Config/"` and change the database name in the copied files to `"dev_queo_boards_it"`.
+
+
+### Queo Boards API Create first User
+
+Go in to the C# Solution and set the "LocalUserCreator"-Project as start project and run it.\
+You will see a command line window where you type in a password for your user account.\
+Now the Tool will show you a hash for your password. 
+
+Open your management sorftware for your Microsoft SQL Server an run this SQL statement to create your user.
+
+Example:
+```
+INSERT INTO tblUser (BusinessId, UserName, Firstname, Lastname, Email, IsEnabled, PasswordHash, UserCategory) 
+VALUES (NEWID(), '<YOURUSERNAME>', '<YOURFIRSTNAME>', '<YOURLASTNAME>', '<YOUREMAIL>', 1, '<YOURPASSWORDHASH>', 'Local');
+
+INSERT INTO tblUserRoles (User_Id, Role) 
+VALUES (<YOUR_USER_ID>, 'Administrator'); 
+```
